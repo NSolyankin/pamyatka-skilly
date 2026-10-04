@@ -52,7 +52,6 @@ header h1{font-size:clamp(28px,4.6vw,40px);letter-spacing:-.01em}
 .pill{font-family:var(--f-mono);font-size:13px;padding:3px 9px;border-radius:5px}
 .pill.cl{background:var(--cl-soft);color:var(--cl)}
 .pill.gl{background:var(--gl-soft);color:var(--gl)}
-.pill.no{background:var(--no-soft);color:var(--no);text-decoration:line-through}
 
 /* меню разделов */
 nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
@@ -148,12 +147,6 @@ ul.check li::before{content:"";position:absolute;left:15px;top:15px;width:16px;h
 .not{font-size:14px;color:var(--muted)}
 .not b{color:var(--no)}
 
-/* без pravo-* */
-.miss{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.box{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:18px;min-width:0}
-.box h3{font-size:19px;margin-bottom:6px;color:var(--no)}
-.lbl{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:14px 0 4px}
-.box ul{margin:0;padding-left:18px;display:grid;gap:5px}
 
 /* сообщения */
 .sig{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -181,7 +174,7 @@ ul.tips{padding-left:20px;margin:0;display:grid;gap:6px;max-width:72ch}
 footer{margin-top:44px;padding-block:22px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 
 @media (max-width:820px){
-  .rule,.cards,.miss,.sig,.bnd,.chains{grid-template-columns:1fr}
+  .rule,.cards,.sig,.bnd,.chains{grid-template-columns:1fr}
   .navg{grid-template-columns:1fr}
   .card dl{grid-template-columns:1fr;gap:2px} .card dt{padding-top:8px}
   .tbl thead{display:none}
@@ -204,7 +197,7 @@ footer{margin-top:44px;padding-block:22px 40px;border-top:1px solid var(--line);
     <div class="kicker">Второй ноутбук · 04.10.2026</div>
     <h1>Юридические скиллы: что, когда и как сказать</h1>
     <p class="lead">Семь скиллов от двух источников. CasusLegal отвечает за судебную практику, Глосса за доктрину по ГК РФ.
-      Здесь: как выбрать нужный, что сказать, где скилл остановится и спросит, и что меняется без правопоиска и правологики.</p>
+      Здесь: как выбрать нужный, что сказать и где скилл остановится и спросит.</p>
     <div class="inst">
       <span class="pill cl">proverka-akta</span>
       <span class="pill cl">praktika-pod-tezisy</span>
@@ -213,8 +206,6 @@ footer{margin-top:44px;padding-block:22px 40px;border-top:1px solid var(--line);
       <span class="pill gl">glossa-sverka-s-doktrinoy</span>
       <span class="pill gl">glossa-razbor-sudebnogo-akta</span>
       <span class="pill gl">glossa-obosnovanie-dovoda</span>
-      <span class="pill no">pravo-poisk</span>
-      <span class="pill no">pravo-logika</span>
     </div>
   </div>
 </header>
@@ -226,7 +217,6 @@ footer{margin-top:44px;padding-block:22px 40px;border-top:1px solid var(--line);
   <a href="#pairs">Не перепутать</a>
   <a href="#cards">Карточки</a>
   <a href="#chains">Цепочки</a>
-  <a href="#missing">Без pravo-*</a>
   <a href="#signals">Сообщения</a>
   <a href="#borders">Границы и советы</a>
 </div></nav>
@@ -307,8 +297,6 @@ footer{margin-top:44px;padding-block:22px 40px;border-top:1px solid var(--line);
           <li><span class="n gl">4</span><div><div class="t"><a href="#c-g-dovod">glossa-obosnovanie-dovoda</a><span class="opt">по желанию</span></div>
             <div class="d">Встроит доктрину в черновик жалобы с дословными цитатами и сносками.</div>
             <span class="say" tabindex="0">Подкрепи доводы этой жалобы по Глоссе и покажи возражения</span></div></li>
-          <li><span class="n hand">5</span><div><div class="t">Логическая проверка вручную</div>
-            <div class="d">Здесь нет pravo-logika. Фраза для запроса в разделе <a href="#missing">«Без pravo-*»</a>.</div></div></li>
         </ol>
       </div>
 
@@ -325,8 +313,6 @@ footer{margin-top:44px;padding-block:22px 40px;border-top:1px solid var(--line);
           <li><span class="n gl">2</span><div><div class="t"><a href="#c-g-dovod">glossa-obosnovanie-dovoda</a><span class="opt">если спор по ГК</span></div>
             <div class="d">Карта доводов: опора, оговорки, чем возразят; отдельный блок по каждому акту оппонента.</div>
             <span class="say" tabindex="0">Вот иск и наш черновик отзыва. Подбери опору по Глоссе и разбери все акты, на которые ссылается истец</span></div></li>
-          <li><span class="n hand">3</span><div><div class="t">Логическая проверка вручную</div>
-            <div class="d">См. раздел <a href="#missing">«Без pravo-*»</a>.</div></div></li>
         </ol>
       </div>
 
@@ -383,20 +369,16 @@ footer{margin-top:44px;padding-block:22px 40px;border-top:1px solid var(--line);
           <li><span class="n gl">1</span><div><div class="t"><a href="#c-g-sverka">glossa-sverka-s-doktrinoy</a></div>
             <div class="d">Сначала краткий вердикт, полный разбор по вашему «да».</div>
             <span class="say" tabindex="0">Примени скилл «Глосса. Сверка с доктриной» к приложенной работе. Начни с краткого вердикта</span></div></li>
-          <li><span class="n hand">!</span><div><div class="t">Записка вне ГК (КоАП, налоги, трудовое) или проверка логики</div>
-            <div class="d">На этом ноутбуке скилла для этого нет: это была pravo-logika.</div></div></li>
         </ol>
       </div>
 
       <div class="route" id="r8">
         <h3>Общий вопрос → справка</h3>
-        <p class="why">На основном компьютере это делает pravo-poisk. Здесь его нет, и Claude ответит без методики сведения источников.</p>
+        <p class="why">Отдельного скилла для этого среди семи нет. Спрашивайте коннектор напрямую или превратите вопрос в тезисы.</p>
         <ol class="steps">
           <li><span class="n hand">1</span><div><div class="t">Короткий вопрос к одной базе: напрямую коннектору</div>
             <span class="say" tabindex="0">Найди в CasusLegal позицию ВС по вопросу …, дай ссылки на акты</span></div></li>
           <li><span class="n cl">2</span><div><div class="t">Есть позиция: разложите ее на тезисы и запустите <a href="#c-praktika">praktika-pod-tezisy</a></div></div></li>
-          <li><span class="n hand">3</span><div><div class="t">Полная справка: практика, нормы в К+, округ, доктрина</div>
-            <div class="d">Лучше сделать на основном компьютере.</div></div></li>
         </ol>
       </div>
 
@@ -467,7 +449,7 @@ footer{margin-top:44px;padding-block:22px 40px;border-top:1px solid var(--line);
         <dt>Выход</dt><dd>1) Черновик Markdown с активными ссылками и выделенными цитатами. 2) После одобрения DOCX: черно-белый, Times New Roman, A4, блок-цитаты, кликабельные ссылки на акты, каталог практики в конце.</dd>
         <dt>Ход</dt><dd><div class="flow"><span>тезисы</span><i>→</i><span>1–2 акта на довод</span><i>→</i><span class="wait">черновик .md: ваши правки</span><i>→</i><span class="wait">«одобряю, собирай DOCX»</span></div></dd>
       </dl>
-      <div class="note"><b>На этом ноутбуке.</b> Обязательное логическое ревью делает pravo-logika, ее здесь нет: скилл проведет упрощенную проверку сам и должен предупредить, что полного ревью не было. Статьи кодексов он сверяет через К+; если К+ недоступен, статьи будут помечены «проверить человеком».</div>
+      <div class="note"><b>Учтите.</b> Статьи кодексов он сверяет через К+. Если К+ недоступен, статьи будут помечены «проверить человеком».</div>
       <span class="say" tabindex="0">Составь отзыв на кассационную жалобу по этому делу и подкрепи каждый довод практикой ВС</span>
       <div class="not"><b>Не для:</b> справок, заключений, меморандумов; подбора практики без документа; проверки чужого акта.</div>
     </article>
@@ -531,53 +513,17 @@ footer{margin-top:44px;padding-block:22px 40px;border-top:1px solid var(--line);
   <p class="sub">Порядок, в котором скиллы дополняют друг друга. Следующий шаг можно делать в том же чате.</p>
   <div class="chains">
     <div class="chain"><h3>Обжалование решения</h3>
-      <div class="row"><a class="chip cl" href="#c-proverka">proverka-akta</a><span class="arr">→</span><a class="chip gl" href="#c-g-razbor">glossa-razbor</a><span class="arr">→</span><a class="chip cl" href="#c-dokument">sudebny-dokument</a><span class="arr">→</span><a class="chip gl" href="#c-g-dovod">glossa-obosnovanie</a><span class="arr">→</span><span class="chip hand">логика вручную</span></div>
+      <div class="row"><a class="chip cl" href="#c-proverka">proverka-akta</a><span class="arr">→</span><a class="chip gl" href="#c-g-razbor">glossa-razbor</a><span class="arr">→</span><a class="chip cl" href="#c-dokument">sudebny-dokument</a><span class="arr">→</span><a class="chip gl" href="#c-g-dovod">glossa-obosnovanie</a></div>
       <p>Шаги Глоссы только для спора по ГК.</p></div>
     <div class="chain"><h3>Отзыв на иск</h3>
-      <div class="row"><a class="chip cl" href="#c-praktika">praktika-pod-tezisy</a><span class="arr">→</span><a class="chip cl" href="#c-dokument">sudebny-dokument</a><span class="arr">→</span><a class="chip gl" href="#c-g-dovod">glossa-obosnovanie</a><span class="arr">→</span><span class="chip hand">логика вручную</span></div>
+      <div class="row"><a class="chip cl" href="#c-praktika">praktika-pod-tezisy</a><span class="arr">→</span><a class="chip cl" href="#c-dokument">sudebny-dokument</a><span class="arr">→</span><a class="chip gl" href="#c-g-dovod">glossa-obosnovanie</a></div>
       <p>Первый шаг по желанию, если позиция под вопросом.</p></div>
     <div class="chain"><h3>Новый Пленум или обзор</h3>
       <div class="row"><a class="chip cl" href="#c-razbor">casuslegal-razbor</a></div>
       <p>Отдельный чат: задача долгая.</p></div>
     <div class="chain"><h3>Статья или записка по ГК</h3>
-      <div class="row"><a class="chip gl" href="#c-g-sverka">glossa-sverka</a><span class="arr">→</span><span class="chip hand">логика на основном компьютере</span></div>
-      <p>Логику записки проверяет pravo-logika, ее здесь нет.</p></div>
-  </div>
-</div></section>
-
-<section id="missing"><div class="wrap">
-  <h2>Без pravo-poisk и pravo-logika</h2>
-  <p class="sub">Остальные скиллы на них ссылаются. Вот что от этого меняется и как подстраховаться.</p>
-  <div class="miss">
-    <div class="box">
-      <h3>Нет pravo-logika</h3>
-      <div class="lbl">Что меняется</div>
-      <ul>
-        <li><b>casuslegal-sudebny-dokument</b> считает логическое ревью черновика обязательным. Здесь он заменит его экспресс-проверкой субсумпции и должен об этом предупредить.</li>
-        <li>Нет инструмента для проверки логики записки или позиции вне ГК (КоАП, налоги, трудовое право).</li>
-      </ul>
-      <div class="lbl">Что делать</div>
-      <ul>
-        <li>Не было предупреждения: спросите «было ли полное логическое ревью?».</li>
-        <li>Перед подачей попросите в том же чате:</li>
-      </ul>
-      <span class="say" tabindex="0">Проверь черновик с позиции суда и оппонента: следует ли каждый вывод из нормы и факта, нет ли противоречий между разделами и признаний против интереса, совпадает ли просительная часть с мотивировкой</span>
-      <ul><li>Для важного документа прогоните готовый DOCX через pravo-logika на основном компьютере.</li></ul>
-    </div>
-    <div class="box">
-      <h3>Нет pravo-poisk</h3>
-      <div class="lbl">Что меняется</div>
-      <ul>
-        <li>Запросы «собери правовую справку», «как суды смотрят на X», «норма и практика по ст. …», «оцени риски», «с учетом практики нашего округа» раньше шли в pravo-poisk. Здесь Claude ответит сам, без методики сведения источников и без карты пробелов.</li>
-        <li>Локальной библиотеки томов Глоссы на этом ноутбуке нет: доктрина только через коннектор.</li>
-      </ul>
-      <div class="lbl">Что делать</div>
-      <ul>
-        <li>Короткий вопрос к одной базе задавайте коннектору напрямую, без скилла.</li>
-        <li>Есть позиция: разложите на тезисы и запустите <a href="#c-praktika">praktika-pod-tezisy</a>.</li>
-        <li>Полную справку (практика, нормы в К+, округ, доктрина) делайте на основном компьютере.</li>
-      </ul>
-    </div>
+      <div class="row"><a class="chip gl" href="#c-g-sverka">glossa-sverka</a></div>
+      <p>Сначала краткий вердикт, полный разбор по вашему «да».</p></div>
   </div>
 </div></section>
 
